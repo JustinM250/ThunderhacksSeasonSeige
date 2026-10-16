@@ -2,9 +2,9 @@
 
 Download the folder named "GAME_BUILD". Simply open the .exe to run the game.
 
-# SEASONS SEIGE
+# SEASON SEIGE
 
-Seasons Seige is our entry to the Thunderhacks II Four Seasons Track.
+SEASON SEIGE is our entry to the Thunderhacks II Four Seasons Track.
 The game is simple:
 - Cut down trees for wood, to keep the campfire active. You must keep warm.
 - Cut down bushes for food. Eat to fill your hunger.
