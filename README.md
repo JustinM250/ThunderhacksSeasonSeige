@@ -10,6 +10,8 @@ The game is simple:
 	- Cut down bushes for food. Eat to fill your hunger.
 	- Fight mythological enemies in hordes as the night comes down.
 
+	- Your goal is to simply survive one year. Which really is just 6 minutes IRT.
+
 # NOTE & CREDITS
 
 We hope y'all enjoy the game; we poured tons of effort into it on Thursday Night and Friday Morning...
