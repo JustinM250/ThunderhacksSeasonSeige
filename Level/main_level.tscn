@@ -15,6 +15,7 @@ script = ExtResource("1_7ireg")
 [node name="Sounds" type="Node" parent="." unique_id=215903975]
 
 [node name="Clock" parent="." unique_id=2119593601 instance=ExtResource("2_hyf1s")]
+time_multiplier = null
 
 [node name="Sky" type="Node2D" parent="." unique_id=285934646]
 

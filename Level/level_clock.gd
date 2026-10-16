@@ -68,8 +68,8 @@ func _physics_process(delta: float) -> void:
 		
 		
 func _set_sky_col():
-	var day_col := Color(0.0, 0.77, 0.878, 1.0)
-	var night_col := Color(0.047, 0.156, 0.284, 1.0)
+	var day_col: Color = SEASONS.get_season_day_color(r.current_season)
+	var night_col: Color = SEASONS.get_season_night_color(r.current_season)
 
 	var t: float = 1.0 - (time_left / solar_cycle_time)
 
