@@ -12,18 +12,23 @@ class_name Campfire
 	#)
 	#_update()
 	
-const log_cost: int = 3
+const log_cost: int = 5
 	
 var active: bool = false:
 	set(v):
 		active = v
 		flame_sprite.visible = v 
+		
+		if in_radius and not v:
+			_set_prompt(true)
+		
 var active_timer: float = -1.0
 		
 func _ready() -> void:
 	super._ready()
 	active = false
 	in_radius = false
+	$Prompt/L.text = "Give " + str(log_cost) + " Logs? [E]"
 		
 var flame_t: float = 0.0
 var flame_toggle: float = 0.0
@@ -44,13 +49,14 @@ func _physics_process(delta: float) -> void:
 			for n in range(log_cost):
 				r.player.remove_from_inventory(ITEMS.LIST.LOG)
 			active = true
-			active_timer = 30.0
+			active_timer = 20.0
 			_set_prompt(false)
 	
 			r.play_sound(preload("res://SFX/POP.mp3"))
 	
 	if in_radius:
 		r.player.warmth += 0.04 * delta 
+		r.player.health += 0.01 * delta 
 	
 #func _update():
 	#sprite.texture = _get_seasonal_tree_texture(r.current_season)

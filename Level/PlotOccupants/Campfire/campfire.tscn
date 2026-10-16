@@ -43,7 +43,6 @@ offset_right = 70.0
 offset_bottom = 8.0
 scale = Vector2(0.35, 0.35)
 theme_override_fonts/font = ExtResource("4_jh5gv")
-text = "Give 5 Logs? [E]"
 
 [node name="A" type="Area2D" parent="." unique_id=825578342]
 collision_layer = 0

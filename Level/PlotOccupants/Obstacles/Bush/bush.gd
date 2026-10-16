@@ -7,7 +7,7 @@ var has_berries: bool:
 		has_berries = v
 		
 		berries_sprite.visible = v
-var berries_growth_timer: float = randf_range(25.0,35.0)
+var berries_growth_timer: float = randf_range(5.0,15.0)
 
 #var r: Level
 func _ready() -> void:
@@ -40,7 +40,7 @@ func _physics_process(delta: float) -> void:
 		if berries_growth_timer >= 0.0:
 			berries_growth_timer -= delta
 			if berries_growth_timer <= 0.0:
-				berries_growth_timer = randf_range(25.0,35.0)
+				berries_growth_timer = randf_range(5.0,15.0)
 				has_berries = true 
 	
 var health: int = 1:

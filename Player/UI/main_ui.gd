@@ -45,11 +45,15 @@ func _physics_process(_delta: float) -> void:
 	for i in slots:
 		if inv_numbered.has(i.corresponding_item):
 			#i.item_tex.texture = ITEMS.get_item_texture(i.corresponding_item)
-			i.held_item = i.corresponding_item
+			var item: ITEMS.LIST = i.corresponding_item
+			
 			
 			var amount: int = inv_numbered.get(i.corresponding_item)
-			
-			i.num_label.text = str( amount ) if amount > 1 else ""
+			if amount <= 0:
+				i.held_item = ITEMS.LIST.ITEM_NULL
+			else:
+				i.held_item = item
+				i.num_label.text = str( amount ) if amount > 1 else ""
 	
 		##
 		

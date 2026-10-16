@@ -82,7 +82,7 @@ func _physics_process(delta: float) -> void:
 	if regrow_timer >= 0.0:
 		regrow_timer -= delta
 		if regrow_timer <= 0.0:
-			regrow_timer = 10.0
+			regrow_timer = randf_range(5.0,10.0)
 			get_availible_plots().pick_random().set_occupant(bush.instantiate() if randi_range(0,1) == 0 else tree.instantiate() )
 		
 	enemy_timer -= delta

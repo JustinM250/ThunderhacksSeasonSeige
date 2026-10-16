@@ -22,6 +22,6 @@ func get_item_texture(l: LIST) -> Texture2D:
 
 func get_item_hunger_replenish(l: LIST) -> float:
 	match(l):
-		LIST.SHROOM: return 15.0
-		LIST.BERRIES: return 45.0
+		LIST.SHROOM: return 4.0
+		LIST.BERRIES: return 7.0
 		_: return -1.0
