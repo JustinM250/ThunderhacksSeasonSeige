@@ -16,10 +16,5 @@ The game is simple:
 We hope y'all enjoy the game; we poured tons of effort into it on Thursday Night and Friday Morning...
 Yes, we didn't get much sleep :p
 
-Ben Nadon
-- Acoustic Guitar
-- SFX
-- Voiceovers
-Justin McIntomney
-- Programming / Godot work
-- Art
+Ben Nadon (Acoustic Guitar Music, SFX, Voiceover)
+Justin McIntomney (Building with Godot, Art)
