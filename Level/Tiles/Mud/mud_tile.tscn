@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b2q0w7xcicd8e" path="res://Level/Tiles/Mud/mud_tile.png" id="2_3xcxv"]
 
 [node name="Tile" unique_id=193607611 instance=ExtResource("1_adiok")]
+tile_type = null
 
 [node name="Sprite" parent="." index="0" unique_id=624718553]
 texture = ExtResource("2_3xcxv")

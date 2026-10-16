@@ -19,6 +19,9 @@ var current_season: SEASONS.LIST:
 	set(v):
 		current_season = v
 		season_updated.emit(v)
+		
+		
+		
 #@warning_ignore_start("unused_signal")
 signal season_updated(l: SEASONS.LIST)
 
@@ -52,9 +55,21 @@ func get_availible_plots() -> Array[Plot]:
 
 @onready var sky_col_rect: ColorRect = $Sky/SkyColRect
 @onready var night_darkness_overlay: ColorRect = $Sky/NightDarknessOverlay
+@onready var rolling_hills: Sprite2D = $RollingHills
 
 func _ready() -> void:
 	_initialize_plots()
+	
+	season_updated.connect(func(l: SEASONS.LIST):
+		var m: Color 
+		match(l):
+			SEASONS.LIST.SPRING: m = Color("229c59")
+			SEASONS.LIST.SUMMER: m = Color("72c73eff")
+			SEASONS.LIST.AUTUMN: m = Color("9c6f22ff")
+			_: m = Color("9c9c9cff")
+		
+		rolling_hills.modulate = m
+	)
 
 var campfire = preload("res://Level/PlotOccupants/Campfire/campfire.tscn")
 var tree = preload("res://Level/PlotOccupants/Obstacles/Tree/tree.tscn")
