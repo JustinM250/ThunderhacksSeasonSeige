@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d4fe4m0r0rce0"]
+
+[ext_resource type="Script" uid="uid://ulhknpbco3gw" path="res://Level/level_clock.gd" id="1_t8gv5"]
+
+[node name="Clock" type="Node" unique_id=2119593601]
+script = ExtResource("1_t8gv5")

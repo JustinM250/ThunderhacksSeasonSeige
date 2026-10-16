@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bkand26bdg7hy"]
+
+[node name="Speaker" type="AudioStreamPlayer" unique_id=1535684343]
+autoplay = true

@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://cvawldlidcqn3"]
+
+[ext_resource type="Script" uid="uid://bjqwr70avuxx7" path="res://Player/UI/main_ui.gd" id="1_7xkl7"]
+[ext_resource type="Theme" uid="uid://p1p4y8xy4v58" path="res://Player/UI/main_ui_theme.tres" id="2_j5gn7"]
+[ext_resource type="Texture2D" uid="uid://dm7mmvq17lyc3" path="res://Player/UI/ui_progress_bar_under.png" id="2_n1dkb"]
+[ext_resource type="Texture2D" uid="uid://ub5y5s5bauqo" path="res://Player/UI/ui_progress_bar_progress.png" id="3_j5gn7"]
+[ext_resource type="PackedScene" uid="uid://cmn7d11ail82m" path="res://Player/UI/hotbar_slot.tscn" id="5_c64tu"]
+
+[node name="MainUI" type="CanvasLayer" unique_id=1476214696]
+script = ExtResource("1_7xkl7")
+
+[node name="C" type="Control" parent="." unique_id=1625475583]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_j5gn7")
+
+[node name="TextureRect" type="TextureRect" parent="C" unique_id=171690702]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CycleLabel" type="Label" parent="C" unique_id=1707799971]
+layout_mode = 1
+offset_left = 32.0
+offset_top = 20.0
+offset_right = 216.0
+offset_bottom = 92.0
+
+[node name="CycleLabel2" type="Label" parent="C" unique_id=1953433576]
+layout_mode = 1
+offset_left = 32.0
+offset_top = 164.0
+offset_right = 992.0
+offset_bottom = 516.0
+scale = Vector2(0.5, 0.5)
+text = "OBJECTIVE: Survive as long as possible. Eat well. Keep warm. 
+
+TIPS: Chop down trees for logs and thatch. Keep distance from enemies.
+
+CONTROLS: A/D to move, SPACE to use item."
+autowrap_mode = 2
+
+[node name="CycleBar" type="TextureProgressBar" parent="C" unique_id=1241685466]
+layout_mode = 0
+offset_left = 31.999998
+offset_top = 91.99999
+offset_right = 92.0
+offset_bottom = 97.99999
+scale = Vector2(8, 8)
+max_value = 1.0
+step = 0.01
+value = 1.0
+texture_under = ExtResource("2_n1dkb")
+texture_progress = ExtResource("3_j5gn7")
+
+[node name="C1" type="ColorRect" parent="C" unique_id=1825059243]
+layout_mode = 0
+offset_left = 1120.0
+offset_top = 72.0
+offset_right = 1904.0
+offset_bottom = 288.0
+color = Color(0, 0, 0, 1)
+
+[node name="C2" type="ColorRect" parent="C" unique_id=15869397]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 820.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="BarLabel1" type="Label" parent="C" unique_id=511608850]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 1144.0
+offset_top = 84.0
+offset_right = 1368.0
+offset_bottom = 156.0
+text = "HEALTH"
+
+[node name="BarLabel2" type="Label" parent="C" unique_id=1612775100]
+modulate = Color(0.043137256, 0.72156864, 0.34901962, 1)
+layout_mode = 0
+offset_left = 1144.0
+offset_top = 148.0
+offset_right = 1384.0
+offset_bottom = 220.0
+text = "HUNGER"
+
+[node name="BarLabel3" type="Label" parent="C" unique_id=341762995]
+modulate = Color(1, 0.6156863, 0.078431375, 1)
+layout_mode = 0
+offset_left = 1144.0
+offset_top = 212.0
+offset_right = 1392.0
+offset_bottom = 284.0
+text = "WARMTH"
+
+[node name="BarLabel4" type="Label" parent="C" unique_id=770852478]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 1004.0
+offset_right = 984.0
+offset_bottom = 1076.0
+text = "1        2       3       4        5        6       7       8"
+
+[node name="HealthBar" type="TextureProgressBar" parent="C" unique_id=1370360009]
+layout_mode = 0
+offset_left = 1408.0
+offset_top = 96.0
+offset_right = 1468.0
+offset_bottom = 102.0
+scale = Vector2(8, 8)
+max_value = 1.0
+step = 0.01
+value = 1.0
+texture_under = ExtResource("2_n1dkb")
+texture_progress = ExtResource("3_j5gn7")
+tint_progress = Color(1, 0, 0, 1)
+
+[node name="HungerBar" type="TextureProgressBar" parent="C" unique_id=1077388130]
+layout_mode = 0
+offset_left = 1408.0
+offset_top = 160.0
+offset_right = 1468.0
+offset_bottom = 166.0
+scale = Vector2(8, 8)
+max_value = 1.0
+step = 0.01
+value = 1.0
+texture_under = ExtResource("2_n1dkb")
+texture_progress = ExtResource("3_j5gn7")
+tint_progress = Color(0.043200005, 0.72, 0.34776005, 1)
+
+[node name="WarmthBar" type="TextureProgressBar" parent="C" unique_id=1642671867]
+layout_mode = 0
+offset_left = 1408.0
+offset_top = 224.0
+offset_right = 1468.0
+offset_bottom = 230.0
+scale = Vector2(8, 8)
+max_value = 1.0
+step = 0.01
+value = 1.0
+texture_under = ExtResource("2_n1dkb")
+texture_progress = ExtResource("3_j5gn7")
+tint_progress = Color(1, 0.6166667, 0.07999998, 1)
+
+[node name="HotbarSlots" type="HBoxContainer" parent="C" unique_id=259933963]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -284.0
+offset_top = -228.0
+offset_right = 320.0
+offset_bottom = -156.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+
+[node name="HotbarSlot" parent="C/HotbarSlots" unique_id=759742376 instance=ExtResource("5_c64tu")]
+layout_mode = 2
+corresponding_item = 1
+
+[node name="HotbarSlot2" parent="C/HotbarSlots" unique_id=1096211276 instance=ExtResource("5_c64tu")]
+layout_mode = 2
+corresponding_item = 5
+
+[node name="HotbarSlot3" parent="C/HotbarSlots" unique_id=61101116 instance=ExtResource("5_c64tu")]
+layout_mode = 2
+corresponding_item = 6
+
+[node name="HotbarSlot4" parent="C/HotbarSlots" unique_id=23782676 instance=ExtResource("5_c64tu")]
+layout_mode = 2
+corresponding_item = 3
+
+[node name="HotbarSlot5" parent="C/HotbarSlots" unique_id=1049949495 instance=ExtResource("5_c64tu")]
+layout_mode = 2
+corresponding_item = 4
+
+[node name="HotbarSlot6" parent="C/HotbarSlots" unique_id=344239903 instance=ExtResource("5_c64tu")]
+layout_mode = 2
+corresponding_item = 1
+
+[node name="HotbarSlot7" parent="C/HotbarSlots" unique_id=1153844664 instance=ExtResource("5_c64tu")]
+layout_mode = 2
+corresponding_item = 2
+
+[node name="HotbarSlot8" parent="C/HotbarSlots" unique_id=1055904998 instance=ExtResource("5_c64tu")]
+layout_mode = 2

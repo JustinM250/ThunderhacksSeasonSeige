@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://btan0serotaaq"]
+
+[ext_resource type="Script" uid="uid://dxoqkb7fyhxr7" path="res://Level/PlotOccupants/plot_occupant.gd" id="1_m1q22"]
+
+[node name="PlotOccupant" type="Node2D" unique_id=1783010441]
+script = ExtResource("1_m1q22")

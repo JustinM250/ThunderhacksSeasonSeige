@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bxgqub3its6mo"]
+
+[ext_resource type="PackedScene" uid="uid://bliq3k6qtmgvq" path="res://Enemies/enemy_base.tscn" id="1_7y1vx"]
+[ext_resource type="Script" uid="uid://c8tbvfo8p557f" path="res://Enemies/Husk/husk.gd" id="2_o0lvg"]
+[ext_resource type="Texture2D" uid="uid://dnb6pq1wx6b6b" path="res://Enemies/Husk/husk.png" id="3_b3hyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3hyh"]
+size = Vector2(6, 9)
+
+[node name="E" unique_id=1051826442 instance=ExtResource("1_7y1vx")]
+script = ExtResource("2_o0lvg")
+max_health = 50.0
+x_speed = 15.0
+
+[node name="S" parent="." index="0" unique_id=1016487800]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_b3hyh")
+
+[node name="Sprite" parent="." index="1" unique_id=1681138180]
+texture = ExtResource("3_b3hyh")
+
+[node name="NameLabel" parent="." index="2" unique_id=301369748]
+text = "Husk"

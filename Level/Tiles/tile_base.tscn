@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://wni7xrog8wtx"]
+
+[ext_resource type="Script" uid="uid://dvl5h37bmcqni" path="res://Level/Tiles/tile_base.gd" id="1_rve4l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5eas"]
+size = Vector2(8, 8)
+
+[node name="Tile" type="Node2D" unique_id=193607611]
+script = ExtResource("1_rve4l")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=624718553]
+
+[node name="C" type="StaticBody2D" parent="." unique_id=1308749588]
+
+[node name="S" type="CollisionShape2D" parent="C" unique_id=235259532]
+shape = SubResource("RectangleShape2D_h5eas")

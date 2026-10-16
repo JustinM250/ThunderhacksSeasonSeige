@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c2sisy37l6tnx"]
+
+[ext_resource type="Script" uid="uid://cbxrnfpajx6hf" path="res://Level/PlotOccupants/Obstacles/Bush/bush.gd" id="1_cj4hu"]
+[ext_resource type="Texture2D" uid="uid://dgsu7i8m138km" path="res://Level/PlotOccupants/Obstacles/Bush/bush_berries.png" id="2_pd6jx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pd6jx"]
+radius = 4.0
+
+[node name="Bush" type="Node2D" unique_id=1612807395]
+script = ExtResource("1_cj4hu")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2062594646]
+position = Vector2(0, -4)
+
+[node name="BerriesSprite" type="Sprite2D" parent="." unique_id=1845730165]
+visible = false
+position = Vector2(0, -4)
+texture = ExtResource("2_pd6jx")
+
+[node name="HitArea" type="Area2D" parent="." unique_id=1746184643]
+collision_layer = 0
+collision_mask = 8
+
+[node name="S" type="CollisionShape2D" parent="HitArea" unique_id=1268553595]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_pd6jx")
+
+[connection signal="area_entered" from="HitArea" to="." method="_on_hit_area_area_entered"]

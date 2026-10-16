@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b4557rar142ku"]
+
+[ext_resource type="Script" uid="uid://bajajrvjc07fl" path="res://Level/PlotOccupants/Obstacles/Tree/tree.gd" id="1_3krjv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yydmd"]
+size = Vector2(4, 72)
+
+[node name="Tree" type="Node2D" unique_id=1612807395]
+script = ExtResource("1_3krjv")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2062594646]
+position = Vector2(0, -12)
+
+[node name="HitArea" type="Area2D" parent="." unique_id=805583837]
+collision_layer = 0
+collision_mask = 8
+
+[node name="S" type="CollisionShape2D" parent="HitArea" unique_id=1748568323]
+position = Vector2(0, -36)
+shape = SubResource("RectangleShape2D_yydmd")
+
+[connection signal="area_entered" from="HitArea" to="." method="_on_hit_area_area_entered"]

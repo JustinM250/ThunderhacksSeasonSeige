@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://r1i5so3mnvl7"]
+
+[ext_resource type="Theme" uid="uid://c7cd8rmne3vil" path="res://Title/title_theme.tres" id="1_l0ai7"]
+[ext_resource type="Script" uid="uid://e0cin8xwiva3" path="res://Title/end_title.gd" id="2_l0ai7"]
+
+[node name="Title" type="Control" unique_id=686168170]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l0ai7")
+script = ExtResource("2_l0ai7")
+
+[node name="Label" type="Label" parent="." unique_id=1639675385]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -356.0
+offset_right = 216.0
+offset_bottom = -284.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU WON SEASON SEIGE!
+THANKS FOR PLAYING!"
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=485504569]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Button" parent="VBox" unique_id=322951024]
+layout_mode = 2
+text = "TITLE"
+
+[connection signal="pressed" from="VBox/Title" to="." method="_on_title_pressed"]

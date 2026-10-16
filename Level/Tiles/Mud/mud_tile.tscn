@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://danfqamxiit66"]
+
+[ext_resource type="PackedScene" uid="uid://wni7xrog8wtx" path="res://Level/Tiles/tile_base.tscn" id="1_adiok"]
+[ext_resource type="Texture2D" uid="uid://b2q0w7xcicd8e" path="res://Level/Tiles/Mud/mud_tile.png" id="2_3xcxv"]
+
+[node name="Tile" unique_id=193607611 instance=ExtResource("1_adiok")]
+
+[node name="Sprite" parent="." index="0" unique_id=624718553]
+texture = ExtResource("2_3xcxv")

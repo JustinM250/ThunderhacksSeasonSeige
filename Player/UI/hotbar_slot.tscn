@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cmn7d11ail82m"]
+
+[ext_resource type="Script" uid="uid://b8wgioyjj0mo1" path="res://Player/UI/hotbar_slot.gd" id="1_lctuq"]
+[ext_resource type="Texture2D" uid="uid://blsqygn3a7jjg" path="res://Player/UI/ui_slot.png" id="1_r5f6m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lctuq"]
+
+[node name="HotbarSlot" type="PanelContainer" unique_id=759742376]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lctuq")
+script = ExtResource("1_lctuq")
+
+[node name="SlotTex" type="TextureRect" parent="." unique_id=1658877785]
+z_index = 1
+layout_mode = 2
+texture = ExtResource("1_r5f6m")
+expand_mode = 2
+
+[node name="ItemTex" type="TextureRect" parent="." unique_id=442718424]
+z_index = 1
+layout_mode = 2
+texture = ExtResource("1_r5f6m")
+expand_mode = 2
+
+[node name="NumLabel" type="Label" parent="." unique_id=1104378911]
+z_index = 5
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "$"
+horizontal_alignment = 1

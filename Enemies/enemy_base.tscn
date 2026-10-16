@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bliq3k6qtmgvq"]
+
+[ext_resource type="Script" uid="uid://dyk2ng5vstd0i" path="res://Enemies/enemy_base.gd" id="1_8xqx4"]
+[ext_resource type="Texture2D" uid="uid://dgwck5peq5f8a" path="res://Level/PlotOccupants/Obstacles/Bush/bush_summer.png" id="2_gk4pb"]
+[ext_resource type="FontFile" uid="uid://jp8s65ukxgpk" path="res://Fonts/Tiny5-Regular.ttf" id="3_guy7p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gk4pb"]
+size = Vector2(6, 11)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_guy7p"]
+radius = 8.0
+
+[node name="EnemyBase" type="CharacterBody2D" unique_id=1051826442]
+collision_layer = 4
+script = ExtResource("1_8xqx4")
+
+[node name="S" type="CollisionShape2D" parent="." unique_id=1016487800]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_gk4pb")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1681138180]
+texture = ExtResource("2_gk4pb")
+
+[node name="NameLabel" type="Label" parent="." unique_id=301369748]
+offset_left = -22.0
+offset_top = -12.0
+offset_right = 92.0
+offset_bottom = 11.0
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/font = ExtResource("3_guy7p")
+text = "TEXT"
+horizontal_alignment = 1
+
+[node name="A" type="Area2D" parent="." unique_id=1459481185]
+collision_layer = 0
+collision_mask = 2
+
+[node name="S" type="CollisionShape2D" parent="A" unique_id=1214025417]
+shape = SubResource("CircleShape2D_guy7p")
+
+[connection signal="body_entered" from="A" to="." method="_on_area_2d_body_entered"]

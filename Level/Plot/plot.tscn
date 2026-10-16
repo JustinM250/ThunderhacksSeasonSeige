@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b3enrmmko6l64"]
+
+[ext_resource type="Script" uid="uid://kardn2067mpb" path="res://Level/Plot/plot.gd" id="1_1omfg"]
+
+[node name="1" type="Node2D" unique_id=1789799934]
+script = ExtResource("1_1omfg")
