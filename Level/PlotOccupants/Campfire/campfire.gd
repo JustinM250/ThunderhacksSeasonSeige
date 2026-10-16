@@ -19,8 +19,8 @@ var active: bool = false:
 		active = v
 		flame_sprite.visible = v 
 		
-		if in_radius and not v:
-			_set_prompt(true)
+		#if in_radius and not v:
+			#_set_prompt(true)
 		
 var active_timer: float = -1.0
 		

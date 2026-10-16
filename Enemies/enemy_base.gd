@@ -2,6 +2,8 @@ class_name Enemy
 extends CharacterBody2D
 
 @onready var sprite: Sprite2D = $Sprite
+@onready var name_rect: ColorRect = $NameRect
+@onready var name_label: Label = $NameLabel
 
 @export var max_health: float = 100.0
 var health: float:
