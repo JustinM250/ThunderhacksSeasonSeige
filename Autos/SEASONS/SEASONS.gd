@@ -30,3 +30,5 @@ func get_season_night_color(l: LIST) -> Color:
 		LIST.AUTUMN: return Color(0.161, 0.071, 0.23, 1.0)
 		LIST.WINTER: return Color(0.1, 0.1, 0.1, 1.0)
 		_: return Color.BLACK
+		
+var darkness_overlay_color: Color = Color("00000060")

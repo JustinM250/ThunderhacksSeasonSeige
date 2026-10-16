@@ -78,8 +78,10 @@ func _set_sky_col():
 
 	if r.day:
 		r.sky_col_rect.color = day_col.lerp(night_col, t)
+		r.night_darkness_overlay.color = Color.TRANSPARENT.lerp(SEASONS.darkness_overlay_color, t)
 	else:
 		r.sky_col_rect.color = night_col.lerp(day_col, t)
+		r.night_darkness_overlay.color = SEASONS.darkness_overlay_color.lerp(Color.TRANSPARENT, t)
 		
 func _set_ui_cycle_label():
 	r.player.main_ui.cycle_label.text = SEASONS.get_season_name(r.current_season) + " - " + ("DAY" if r.day else "NIGHT")

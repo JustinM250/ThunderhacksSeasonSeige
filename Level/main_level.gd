@@ -51,6 +51,7 @@ func get_availible_plots() -> Array[Plot]:
 	return a
 
 @onready var sky_col_rect: ColorRect = $Sky/SkyColRect
+@onready var night_darkness_overlay: ColorRect = $Sky/NightDarknessOverlay
 
 func _ready() -> void:
 	_initialize_plots()
